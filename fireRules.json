@@ -9,6 +9,18 @@
                 },
                 "email": {
                     ".validate": "newData.isString() && newData.val().matches(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$/i)"
+                },
+                "address":{
+                    ".validate":"newData.isString() && newData.val.length < 50"
+                },
+                "primaryType":{
+                    ".validate":"newData.isString() && (newData.val() === 'Fisher' || newData.val() === 'Distributor' || newData.val() === 'Processor' ||newData.val() === 'Fish Monger')"
+                },
+                "businessNumber":{
+                    ".validate":"newData.isString() && newData.val().matches([0-9]+)"
+                },
+                "province":{
+                    ".validate":"newData.isString() && (newData.val() === 'AB' || newData.val() === 'BC' || newData.val() === 'MB' || newData.val() === 'NB' || newData.val() === 'NL' || newData.val() === 'NS' || newData.val() === 'NT' || newData.val() === 'NU' || newData.val() === 'ON' || newData.val() === 'PE' || newData.val() === 'QC' || newData.val() === 'SK' || newData.val() === 'YT' || newData.val() === '')"
                 }
             }
         }
